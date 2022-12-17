@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+body{
+
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.history{
+
+    position: relative;
+    height: 60%;
+    width: 60%;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid rgb(213, 188, 46);
+
+}
+
+.animation{
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+
+}
+
+.animation > .alien{
+
+    position: absolute;
+    top: 0%;
+
+    height: 20%;
+    padding: 2%;
+    width: 96%;
+
+}
+
+.animation > .trees{
+
+    height: 60%;
+    padding: 2%;
+    width: 96%;
+
+    position: absolute;
+    bottom: 0%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.animation > .trees > .tree{
+
+    height: 100%;
+    width: 100%;
+
+}
+
+.animation > .trees > .tree2{
+
+    height: 100%;
+    width: 100%;
+
+    display: none;
+
+}
+
+.animation > .trees > .tree3{
+
+    height: 100%;
+    width: 100%;
+
+    display: none;
+
+}
+
+.alien-animation{
+
+    animation: alien-animation 2s linear;
+    filter: drop-shadow(0px 0px 20px 20px rgb(255, 220, 82));
+
+}
+
+.text{
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.text > p{
+
+    width: 90%;
+    height: 70%;
+    
+}
+
+.text > button{
+
+    margin-top: 7.5%;
+    border: none;
+    border-radius: 10px;
+    padding: 2.5%;
+    background-color: rgb(28, 109, 197);
+    color: #fff;
+    animation: pulsate 3s infinite linear;
+    transition: 1s;
+    display: none;
+
+}
+
+.text > button:hover{
+
+    transition: 1s;
+    color: rgb(1, 67, 138);
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;
+
+}
+
+@keyframes alien-animation{
+
+    0%{
+
+        top: 0%;
+
+    }
+
+    100%{
+
+        top: 67%;
+        width: 0%;
+
+    }
+
+}
+
+@keyframes pulsate {
+    
+    0%{
+
+        box-shadow: 0px 0px 5px 1px rgb(1, 253, 22);
+        scale: 100%;
+
+    }
+
+    45%{
+
+        scale: 102.5%;
+
+    }
+
+    50%{
+
+        scale: 105%;
+        box-shadow: 0px 0px 2px 1px rgb(0, 120, 8);
+
+    }
+
+    55%{
+
+        scale: 102.5%;
+
+    }
+
+    100%{
+
+        box-shadow: 0px 0px 5px 1px rgb(1, 253, 22);
+        scale: 100%;
+
+    }
+
+}
+
+@media (min-width: 650px){
+
+    .animation > .trees > .tree2{
+
+        display: inherit;
+
+    }
+
+}
+
+@media (min-width: 1250px){
+
+    .animation > .trees > .tree3{
+
+        display: inherit;
+
+    }
+
+}
