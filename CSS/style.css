@@ -23,8 +23,8 @@ body{
 .history{
 
     position: relative;
-    height: 60%;
-    width: 60%;
+    height: 50%;
+    width: 50%;
     border-radius: 10px;
     background-color: #fff;
     border: 2px solid rgb(213, 188, 46);
