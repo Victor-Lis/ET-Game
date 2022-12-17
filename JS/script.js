@@ -19,7 +19,6 @@ const history = {
                "c", "o", "n", "t", "r", "a", "r", " o", " q", "u", "e", " q", "u", "e", "r", " q", "u", "e", " e", "l", "e", " s", "e", "j", "a", ".",
                "\n", "\n", "     A", "s", "s", ":", " G", "e", "n", "e", "r", "a", "l", ".",
             ],
-        button: document.getElementById("history-button")
 
     }
 

@@ -23,8 +23,8 @@ body{
 .history{
 
     position: relative;
-    height: 50%;
-    width: 50%;
+    height: 60%;
+    width: 60%;
     border-radius: 10px;
     background-color: #fff;
     border: 2px solid rgb(213, 188, 46);
@@ -124,29 +124,6 @@ body{
     
 }
 
-.text > button{
-
-    margin-top: 7.5%;
-    border: none;
-    border-radius: 10px;
-    padding: 2.5%;
-    background-color: rgb(28, 109, 197);
-    color: #fff;
-    animation: pulsate 3s infinite linear;
-    transition: 1s;
-    display: none;
-
-}
-
-.text > button:hover{
-
-    transition: 1s;
-    color: rgb(1, 67, 138);
-    background-color: rgb(209, 209, 209);
-    cursor: pointer;
-
-}
-
 @keyframes alien-animation{
 
     0%{
@@ -164,73 +141,11 @@ body{
 
 }
 
-@keyframes pulsate {
-    
-    0%{
-
-        box-shadow: 0px 0px 5px 1px rgb(1, 253, 22);
-        scale: 100%;
-
-    }
-
-    45%{
-
-        scale: 102.5%;
-
-    }
-
-    50%{
-
-        scale: 105%;
-        box-shadow: 0px 0px 2px 1px rgb(0, 120, 8);
-
-    }
-
-    55%{
-
-        scale: 102.5%;
-
-    }
-
-    100%{
-
-        box-shadow: 0px 0px 5px 1px rgb(1, 253, 22);
-        scale: 100%;
-
-    }
-
-}
-
-@media (min-width: 450px){
-
-    .history{
-
-        height: 70%;
-        width: 70%;
-
-    }
-
-    .text > button{
-
-        margin-top: 1.5%;
-        padding: 2%;
-
-    }
-
-}
-
 @media (min-width: 650px){
 
     .animation > .trees > .tree2{
 
         display: inherit;
-
-    }
-
-    .history{
-
-        height: 70%;
-        width: 70%;
 
     }
 
