@@ -47,7 +47,9 @@ const game = {
     tree9: document.getElementById("tree9"),
     correctTree: 0,
     alienJumpScare: document.getElementById("alien-jumpscare"),
-    alienJumpScareAudio: new Audio()
+    alienJumpScareAudio: new Audio(),
+    restart: document.getElementById("restart"),
+    win: document.getElementById("win")
     
 }
 
@@ -124,7 +126,8 @@ function atirar(arvoreEscolhida){
 
         if(arvoreEscolhida == game.correctTree){
 
-            alert("Você ganhou!")
+            game.win.style = "display: flex"
+            game.game.style = "display: none"
 
         }else{
 
@@ -150,28 +153,22 @@ function atirar(arvoreEscolhida){
 
                     game.game.style = "display: none"
 
-                    window.navigator.vibrate(200,200,200,200,200,200,200);
+                    window.navigator.vibrate(3000);
                     game.alienJumpScare.style.display = "inherit"
                     game.alienJumpScare.requestFullscreen()
                     game.alienJumpScareAudio.play()
 
                     game.game.style = "display: none"
 
-                    // game.correctTree = Math.floor((Math.random() * 9) + 1)
-
-                    // game.lifes = 3
-
-                    // game.life1.style = "filter: grayscale(0);"
-                    // game.life2.style = "filter: grayscale(0);"
-                    // game.life3.style = "filter: grayscale(0);"
-
-                    // setTimeout(() => {                    
-                        
-                    //     game.game.style = "display: flex"
-
-                    // }, 2500)
-
                     game.game.style = "display: none"
+
+                    setTimeout(() => {
+                    
+                        document.exitFullscreen()
+                        game.alienJumpScare.style.display = "none"
+                        game.restart.style = "display: flex"
+
+                    },4000)
     
                 },500)
 
@@ -180,6 +177,23 @@ function atirar(arvoreEscolhida){
         }
 
     }
+
+}
+
+function restart(){
+
+    game.restart.style = "display: none"
+
+    game.correctTree = Math.floor((Math.random() * 9) + 1)
+
+    game.lifes = 3
+
+    game.life1.style = "filter: grayscale(0);"
+    game.life2.style = "filter: grayscale(0);"
+    game.life3.style = "filter: grayscale(0);"                  
+                        
+    game.game.style = "display: flex"
+
 
 }
 

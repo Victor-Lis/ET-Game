@@ -326,6 +326,94 @@ body{
 
 }
 
+
+body > .restart{
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 15%;
+    width: 60%;
+    max-width: 200px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px 1px #000;
+    border-radius: 10px;
+    position: absolute;
+    align-self: center;
+    z-index: 1;
+
+}
+
+.restart > p{
+
+    max-width: 170px;
+    width: 90%;
+    text-align: center;
+
+}
+
+.restart > button{
+
+    width: 50%;
+    max-width: 90px;
+    max-height: 45px;
+    color: #fff;
+    background-color: rgb(0, 106, 255);
+    border: none;
+    padding: 2.5%;
+    border-radius: 10px;
+    transition: 1s;
+    animation: pulsate-button 2s infinite linear;
+
+}
+
+.restart > button:hover{
+
+    transition: 1s;
+    background-color: #fff;
+    color: rgb(0, 106, 255);
+    cursor: pointer;
+
+}
+
+body > .win{
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 50%;
+    width: 70%;
+    max-width: 200px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 15px 5px rgb(255, 255, 255);
+    border-radius: 10px;
+    position: absolute;
+    align-self: center;
+    z-index: 1;
+
+}
+
+.win > img{
+
+    width: 70%;
+
+}
+
+.win > p{
+
+    padding-top: 10%;
+    color: rgb(255, 247, 0);
+    width: 80%;
+    height: 05%;
+    text-align: center;
+    filter: drop-shadow(0px 0px 1px 1px #000);
+
+}
+
 @keyframes pulsate{
 
     0%{
