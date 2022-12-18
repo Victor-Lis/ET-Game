@@ -144,6 +144,12 @@ function atirar(arvoreEscolhida){
 
             }
 
+            setTimeout(() => {
+
+                game.gameStatus = "Jogar"
+
+            },500)
+
             if(game.lifes == 0){
 
                 game.life1.style = "filter: grayscale(100);"
@@ -156,7 +162,6 @@ function atirar(arvoreEscolhida){
                     game.alienJumpScare.style.display = "inherit"
                     game.alienJumpScare.requestFullscreen()
                     game.alienJumpScareAudio.play()
-                    game.gameStatus = "Jogar"
 
                     setTimeout(() => {
                     
@@ -184,6 +189,8 @@ function atirar(arvoreEscolhida){
 }
 
 function restart(){
+
+    game.gameStatus = "Jogar"
 
     game.restart.style = "display: none"
 
