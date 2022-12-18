@@ -54,6 +54,7 @@ const game = {
 }
 
 game.alienJumpScareAudio.src="./Audios/JumpScareAudio.mp3"
+game.alienJumpScareAudio.volume = 1
 
 function clearAlienHistory(){
 
@@ -161,7 +162,13 @@ function atirar(arvoreEscolhida){
                     setTimeout(() => {
                     
                         game.game.style = "display: none"
-                        document.exitFullscreen()
+
+                        if(document.fullscreenEnabled){
+
+                            document.exitFullscreen()
+
+                        }
+
                         game.alienJumpScare.style.display = "none"
                         game.restart.style = "display: flex"
 
