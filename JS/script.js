@@ -126,8 +126,8 @@ function atirar(arvoreEscolhida){
 
         if(arvoreEscolhida == game.correctTree){
 
-            game.win.style = "display: flex"
             game.game.style = "display: none"
+            game.win.style = "display: flex"
 
         }else{
 
@@ -158,12 +158,9 @@ function atirar(arvoreEscolhida){
                     game.alienJumpScare.requestFullscreen()
                     game.alienJumpScareAudio.play()
 
-                    game.game.style = "display: none"
-
-                    game.game.style = "display: none"
-
                     setTimeout(() => {
                     
+                        game.game.style = "display: none"
                         document.exitFullscreen()
                         game.alienJumpScare.style.display = "none"
                         game.restart.style = "display: flex"
