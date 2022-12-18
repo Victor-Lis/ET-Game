@@ -118,19 +118,17 @@ function startGame(){
 
 function atirar(arvoreEscolhida){
 
-    console.log(game.gameStatus)
-    console.log(arvoreEscolhida)
-    console.log(game.correctTree)
-    console.log(game.lifes)
-
     if(game.gameStatus == "Jogar"){
 
         if(arvoreEscolhida == game.correctTree){
 
             game.game.style = "display: none"
             game.win.style = "display: flex"
+            game.gameStatus = "Ganhou"
 
         }else{
+
+            game.gameStatus = "Errou"
 
             game.lifes = game.lifes - 1
             
@@ -158,6 +156,7 @@ function atirar(arvoreEscolhida){
                     game.alienJumpScare.style.display = "inherit"
                     game.alienJumpScare.requestFullscreen()
                     game.alienJumpScareAudio.play()
+                    game.gameStatus = "Jogar"
 
                     setTimeout(() => {
                     
