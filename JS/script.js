@@ -46,8 +46,12 @@ const game = {
     tree8: document.getElementById("tree8"),
     tree9: document.getElementById("tree9"),
     correctTree: 0,
+    alienJumpScare: document.getElementById("alien-jumpscare"),
+    alienJumpScareAudio: new Audio()
     
 }
+
+game.alienJumpScareAudio.src="./Audios/JumpScareAudio.mp3"
 
 function clearAlienHistory(){
 
@@ -144,22 +148,30 @@ function atirar(arvoreEscolhida){
 
                 setTimeout(() => {
 
-                    alert("Você perdeu!")
+                    game.game.style = "display: none"
+
+                    window.navigator.vibrate(200,200,200,200,200,200,200);
+                    game.alienJumpScare.style.display = "inherit"
+                    game.alienJumpScare.requestFullscreen()
+                    game.alienJumpScareAudio.play()
 
                     game.game.style = "display: none"
-                    game.correctTree = Math.floor((Math.random() * 9) + 1)
 
-                    game.lifes = 3
+                    // game.correctTree = Math.floor((Math.random() * 9) + 1)
 
-                    game.life1.style = "filter: grayscale(0);"
-                    game.life2.style = "filter: grayscale(0);"
-                    game.life3.style = "filter: grayscale(0);"
+                    // game.lifes = 3
 
-                    setTimeout(() => {                    
+                    // game.life1.style = "filter: grayscale(0);"
+                    // game.life2.style = "filter: grayscale(0);"
+                    // game.life3.style = "filter: grayscale(0);"
+
+                    // setTimeout(() => {                    
                         
-                        game.game.style = "display: flex"
+                    //     game.game.style = "display: flex"
 
-                    }, 2500)
+                    // }, 2500)
+
+                    game.game.style = "display: none"
     
                 },500)
 

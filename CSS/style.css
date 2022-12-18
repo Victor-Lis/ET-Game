@@ -168,6 +168,12 @@ body{
 
 @media (min-width: 1250px){
 
+    .animation > .trees > .tree2{
+
+        display: inherit;
+
+    }
+
     .animation > .trees > .tree3{
 
         display: inherit;
