@@ -61,12 +61,6 @@ function clearAlienHistory(){
 
                     history.history.style.display = "none"
                     game.game.style.display = "flex"
-                    
-                    setTimeout(() => {
-
-                        alert(document.getElementById("arvores").style.paddingLeft)
-
-                    },500)
                 
                 },history.text.tempo * 1.5)
 
