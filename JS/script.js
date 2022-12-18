@@ -2,8 +2,9 @@
 
 const history = {
 
+    history: document.getElementById("history"),
     alien: document.getElementById("alien-history"),
-    area: document.getElementById("history"),
+    area: document.getElementById("history-area"),
     text:{
 
         track: 0,
@@ -21,6 +22,15 @@ const history = {
             ],
 
     }
+
+}
+
+const game = {
+
+    game: document.getElementById("game"),
+    life1: document.getElementById("life1"),
+    life2: document.getElementById("life2"),
+    life3: document.getElementById("life3"),
 
 }
 
@@ -46,6 +56,13 @@ function clearAlienHistory(){
             setTimeout(() => {
 
                 history.text.p.innerText += caractere;
+
+                setTimeout(() => {
+
+                    history.history.style.display = "none"
+                    game.game.style.display = "flex"
+                
+                },history.text.tempo * 1.5)
 
             },history.text.tempo)
 
