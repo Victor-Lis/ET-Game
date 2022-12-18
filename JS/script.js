@@ -86,6 +86,7 @@ function clearAlienHistory(){
 
                     if(game.correctTree == 0){
 
+                        // game.correctTree = Math.floor((Math.random() * 9) + 1)
                         console.log(game.correctTree)
 
                     }
