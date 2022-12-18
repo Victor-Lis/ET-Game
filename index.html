@@ -10,7 +10,7 @@
     <script src="./JS/script.js" defer></script>
 
 </head>
-<body>
+<body id="body">
     
     <div class="history" id="history">
 
@@ -35,7 +35,14 @@
     
     </div>
 
-    <div class="game" id="game">
+    <div class="game" id="game" style="display: none">
+
+        <div class="tutorial" id="tutorial">
+
+            <p> Para encontrar o alien clique nas árvores, você tem 3 vidas a cada erro você perderá uma vida! Boa sorte! </p>
+            <button onclick="startGame()"> Começar! </button>
+
+        </div>
 
         <div class="lifes">
 
@@ -49,23 +56,23 @@
 
             <div class="trees">
 
-                <img class="tree" src="./Images/Tree.svg">
-                <img class="tree" src="./Images/Tree.svg">
-                <img class="tree" src="./Images/Tree.svg">
+                <img class="tree" id="tree1" onclick="atirar(1)" src="./Images/Tree.svg">
+                <img class="tree" id="tree2" onclick="atirar(2)" src="./Images/Tree.svg">
+                <img class="tree" id="tree3" onclick="atirar(3)" src="./Images/Tree.svg">
             
             </div>
             <div class="trees">
 
-                <img class="tree" src="./Images/Tree.svg">
-                <img class="tree" src="./Images/Tree.svg">
-                <img class="tree" src="./Images/Tree.svg">  
+                <img class="tree" id="tree4" onclick="atirar(4)" src="./Images/Tree.svg">
+                <img class="tree" id="tree5" onclick="atirar(5)" src="./Images/Tree.svg">
+                <img class="tree" id="tree6" onclick="atirar(6)" src="./Images/Tree.svg">  
                 
             </div>
             <div class="trees">
 
-                <img class="tree" src="./Images/Tree.svg">
-                <img class="tree" src="./Images/Tree.svg">
-                <img class="tree" src="./Images/Tree.svg">  
+                <img class="tree" id="tree7" onclick="atirar(7)" src="./Images/Tree.svg">
+                <img class="tree" id="tree8" onclick="atirar(8)" src="./Images/Tree.svg">
+                <img class="tree" id="tree9" onclick="atirar(9)" src="./Images/Tree.svg">  
                 
             </div>
 

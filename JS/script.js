@@ -1,5 +1,7 @@
 /* Introdução */
 
+const body = document.getElementById("body")
+
 const history = {
 
     history: document.getElementById("history"),
@@ -27,11 +29,24 @@ const history = {
 
 const game = {
 
+    gameTutorial: document.getElementById("tutorial"),
+    gameStatus: "Tutorial",
     game: document.getElementById("game"),
+    lifes: 3,
     life1: document.getElementById("life1"),
     life2: document.getElementById("life2"),
     life3: document.getElementById("life3"),
-
+    tree1: document.getElementById("tree1"),
+    tree2: document.getElementById("tree2"),
+    tree3: document.getElementById("tree3"),
+    tree4: document.getElementById("tree4"),
+    tree5: document.getElementById("tree5"),
+    tree6: document.getElementById("tree6"),
+    tree7: document.getElementById("tree7"),
+    tree8: document.getElementById("tree8"),
+    tree9: document.getElementById("tree9"),
+    correctTree: 0,
+    
 }
 
 function clearAlienHistory(){
@@ -61,7 +76,14 @@ function clearAlienHistory(){
 
                     history.history.style.display = "none"
                     game.game.style.display = "flex"
-                
+
+                    if(game.correctTree == 0){
+
+                        game.correctTree = Math.floor((Math.random() * 9) + 1)
+                        console.log(game.correctTree)
+
+                    }
+
                 },history.text.tempo * 1.5)
 
             },history.text.tempo)
@@ -71,6 +93,81 @@ function clearAlienHistory(){
         });
 
     }, 2050)
+
+}
+
+function startGame(){
+
+    game.gameTutorial.style.display = "none"
+    game.gameStatus = "Jogar"
+
+    for(var i = 1; i < 10; i++){
+
+        document.getElementById("tree"+i).classList.add("treeHover")
+
+    }
+
+}
+
+function atirar(arvoreEscolhida){
+
+    console.log(game.gameStatus)
+    console.log(arvoreEscolhida)
+    console.log(game.correctTree)
+    console.log(game.lifes)
+
+    if(game.gameStatus == "Jogar"){
+
+        if(arvoreEscolhida == game.correctTree){
+
+            alert("Você ganhou!")
+
+        }else{
+
+            game.lifes = game.lifes - 1
+            
+            if(game.lifes == 2){
+
+                game.life3.style = "filter: grayscale(100);"
+
+            }
+            
+            if(game.lifes == 1){
+
+                game.life2.style = "filter: grayscale(100);"
+
+            }
+
+            if(game.lifes == 0){
+
+                game.life1.style = "filter: grayscale(100);"
+
+                setTimeout(() => {
+
+                    alert("Você perdeu!")
+
+                    game.game.style = "display: none"
+                    game.correctTree = Math.floor((Math.random() * 9) + 1)
+
+                    game.lifes = 3
+
+                    game.life1.style = "filter: grayscale(0);"
+                    game.life2.style = "filter: grayscale(0);"
+                    game.life3.style = "filter: grayscale(0);"
+
+                    setTimeout(() => {                    
+                        
+                        game.game.style = "display: flex"
+
+                    }, 2500)
+    
+                },500)
+
+            }
+
+        }
+
+    }
 
 }
 

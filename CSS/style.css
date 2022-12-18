@@ -166,16 +166,6 @@ body{
 
 }
 
-@media (min-width: 650px){
-
-    .animation > .trees > .tree2{
-
-        display: inherit;
-
-    }
-
-}
-
 @media (min-width: 1250px){
 
     .animation > .trees > .tree3{
@@ -195,12 +185,58 @@ body{
     display: none;
     position: relative;
 
-    width: 100%;
+    width: 90%;
     height: 100%;
     
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+}
+
+.game > .tutorial{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 35%;
+    width: 60%;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px 1px #000;
+    border-radius: 10px;
+    position: absolute;
+    align-self: center;
+    z-index: 1;
+
+}
+
+.game > .tutorial > p{
+
+    width: 80%;
+    text-align: left;
+
+}
+
+.game > .tutorial > button{
+
+    color: #fff;
+    background-color: rgb(0, 106, 255);
+    border: none;
+    padding: 2.5%;
+    border-radius: 10px;
+    transition: 1s;
+    animation: pulsate-button 2s infinite linear;
+
+}
+
+.game > .tutorial > button:hover{
+
+    transition: 1s;
+    background-color: #fff;
+    color: rgb(0, 106, 255);
+    cursor: pointer;
 
 }
 
@@ -268,8 +304,18 @@ body{
 
 .game > .game-area > .trees > .tree{
 
-    width: 50%;
+    width: 40%;
     height: 80%;
+    max-width: 90px;
+
+}
+
+.game > .game-area > .trees > .treeHover:hover{
+
+    background-color: rgba(255, 0, 0, 0.181);
+    cursor: pointer;
+    border-radius: 100%;
+    transition: 1s;
 
 }
 
@@ -295,11 +341,47 @@ body{
 
 }
 
-@media (min-width: 650px){
+@keyframes pulsate-button{
+
+    0%{
+
+        box-shadow: 0px 0px 5px 1px rgb(72, 151, 255);
+
+    }
+
+    50%{
+
+        box-shadow: 0px 0px 2px 1px rgb(0, 57, 103);
+
+    }
+
+    100%{
+
+        box-shadow: 0px 0px 5px 1px rgb(72, 151, 255);
+
+    }
+
+}
+
+
+@media (min-width: 600px){
 
     .game > .game-area{
 
         margin-top: 07.5%;
+
+    }
+
+    .game > .tutorial{
+
+        height: 30%;
+        width: 40%;
+
+    }
+
+    .game > .trees > .tree{
+
+        width: 25%;
 
     }
 
