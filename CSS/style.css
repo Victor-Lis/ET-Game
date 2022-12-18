@@ -227,7 +227,7 @@ body{
 
 .game > .lifes > .life{
 
-    max-width: 50px;
+    max-width: 40px;
     width: 15%;
 
 }
@@ -253,6 +253,8 @@ body{
 .game > .game-area > .trees{
 
     width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
     height: 26%;
     padding-top: 1.5%;
     padding-bottom: 1.5%;
